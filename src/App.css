@@ -1,0 +1,466 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e9f7ff;
+  background-color: #071019;
+   background-image:
+    radial-gradient(circle at 20% 15%, rgba(0, 245, 212, 0.13), transparent 28%),
+    radial-gradient(circle at 80% 35%, rgba(76, 163, 216, 0.12), transparent 30%),
+    linear-gradient(rgba(76, 163, 216, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(73, 131, 167, 0.04) 1px, transparent 1px) !important;
+  background-size: auto, auto, 72px 72px, 72px 72px !important;
+
+  background-attachment: fixed;
+}
+
+
+
+.app {
+  width: 1190px;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 62px 0 80px;
+}
+
+.header {
+  margin-bottom: 64px;
+  padding-bottom: 38px;
+  border-bottom: 1px solid #1c7f6e;
+}
+
+.terminal-text {
+  margin: 0 0 18px;
+  color: #00f5d4;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.terminal-text::before {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  height: 3px;
+  margin-right: 12px;
+  vertical-align: middle;
+  background: #00f5d4;
+  box-shadow: 0 0 12px #00f5d4;
+}
+
+.header h1 {
+  margin: 0;
+  color: #d8edf7;
+  font-size: 86px;
+  line-height: 0.95;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.header h1 span {
+  color: #00f5d4;
+  text-shadow: 0 0 32px rgba(0, 245, 212, 0.75);
+}
+
+.student-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 135px;
+  margin-bottom: 50px;
+  border: 1px solid #1b3f50;
+  background: rgba(7, 18, 24, 0.96);
+}
+
+.form-title {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 26px;
+  border-bottom: 1px solid #1b3f50;
+}
+
+.form-title span,
+.form-title small,
+.records-title h3,
+th,
+.stats p {
+  margin: 0;
+  color: #4ca3d8;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.form-title span::before {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #00f5d4;
+  box-shadow: 0 0 12px #00f5d4;
+}
+
+.student-form input {
+  height: 74px;
+  padding: 0 28px;
+  border: 0;
+  border-right: 1px solid #1b3f50;
+  background: transparent;
+  color: #d8edf7;
+  font-size: 16px;
+}
+
+.student-form input::placeholder {
+  color: #4ca3d8;
+  letter-spacing: 2px;
+}
+
+.student-form input:focus {
+  outline: 1px solid #00f5d4;
+}
+
+.student-form button {
+  border: 0;
+  background: transparent;
+  color: #00f5d4;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.student-form button:hover {
+  background: rgba(0, 245, 212, 0.08);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 50px;
+  border: 1px solid #1b3f50;
+  background: rgba(7, 18, 24, 0.96);
+}
+
+.stat-card {
+  padding: 28px 30px;
+  border-right: 1px solid #1b3f50;
+}
+
+.stat-card:last-child {
+  border-right: 0;
+}
+
+.stats h2 {
+  margin: 12px 0 0;
+  color: #00f5d4;
+  font-size: 44px;
+  line-height: 1;
+  text-shadow: 0 0 18px rgba(0, 245, 212, 0.5);
+}
+
+.records {
+  border: 1px solid #1b3f50;
+  background: rgba(7, 18, 24, 0.96);
+}
+
+.records-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 26px;
+  border-bottom: 1px solid #1b3f50;
+}
+
+.records-title p {
+  margin: 0;
+  color: #00f5d4;
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #0d1d25;
+}
+
+th {
+  padding: 20px 26px;
+  text-align: left;
+}
+
+td {
+  padding: 22px 26px;
+  border-top: 1px solid #1b3f50;
+  font-weight: 700;
+}
+
+.pass-line {
+  border-left: 4px solid #00f5a0;
+}
+
+.fail-line {
+  border-left: 4px solid #ff4d7d;
+}
+
+.score {
+  color: #ffd166;
+  font-size: 26px;
+  text-shadow: 0 0 14px rgba(255, 209, 102, 0.6);
+}
+
+.badge {
+  display: inline-block;
+  min-width: 82px;
+  padding: 7px 12px;
+  border: 1px solid;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.badge::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 7px;
+  border-radius: 50%;
+}
+
+.pass {
+  color: #00f5a0;
+  border-color: #008b62;
+  background: rgba(0, 245, 160, 0.12);
+}
+
+.pass::before {
+  background: #00f5a0;
+  box-shadow: 0 0 10px #00f5a0;
+}
+
+.fail {
+  color: #ff6b93;
+  border-color: #8b2947;
+  background: rgba(255, 77, 125, 0.12);
+}
+
+.fail::before {
+  background: #ff4d7d;
+  box-shadow: 0 0 10px #ff4d7d;
+}
+
+.update-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.update-box input {
+  width: 90px;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #1b3f50;
+  background: #040d12;
+  color: #d8edf7;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.update-box button {
+  height: 42px;
+  padding: 0 22px;
+  border: 1px solid #1b3f50;
+  background: transparent;
+  color: #4ca3d8;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.update-box button:hover {
+  color: #00f5d4;
+  border-color: #00f5d4;
+}
+
+footer {
+  margin-top: 50px;
+  color: #244e62;
+  text-align: center;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+@media (max-width: 800px) {
+  .header h1 {
+    font-size: 44px;
+  }
+
+  .student-form,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .student-form input {
+    border-right: 0;
+    border-bottom: 1px solid #1b3f50;
+  }
+
+  .records {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 760px;
+  }
+}
+html,
+body,
+#root {
+  background-color: #071019 !important;
+  background-image:
+    linear-gradient(rgba(0, 255, 220, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 220, 0.045) 1px, transparent 1px) !important;
+  background-size: 60px 60px !important;
+}
+
+.app {
+  background: transparent !important;
+}
+
+.student-form {
+  border: 1px solid #1b3f50 !important;
+  background: rgba(7, 18, 24, 0.96) !important;
+  border-radius: 0 !important;
+}
+
+.student-form input {
+  background: transparent !important;
+  color: #d8edf7 !important;
+}
+
+.student-form input::placeholder {
+  color: #4ca3d8 !important;
+}
+
+.stats,
+.records {
+  background: rgba(7, 18, 24, 0.96) !important;
+}
+td {
+  color: #e9f7ff !important;
+}
+
+td:first-child {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+tbody tr {
+  background: rgba(7, 18, 24, 0.96) !important;
+}
+
+tbody tr:hover {
+  background: rgba(13, 29, 37, 0.96) !important;
+}
+/* Different theme: midnight blue + amber */
+html,
+body,
+#root {
+  background-color: #07111f !important;
+  background-image:
+    radial-gradient(circle at 18% 12%, rgba(245, 158, 11, 0.13), transparent 24%),
+    radial-gradient(circle at 82% 28%, rgba(56, 189, 248, 0.12), transparent 28%),
+    linear-gradient(rgba(56, 189, 248, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.055) 1px, transparent 1px) !important;
+  background-size: auto, auto, 68px 68px, 68px 68px !important;
+}
+
+.terminal-text,
+.form-title span,
+.form-title small,
+.records-title h3,
+th,
+.stats p {
+  color: #7dd3fc !important;
+}
+
+.terminal-text::before,
+.form-title span::before {
+  background: #f59e0b !important;
+  box-shadow: 0 0 14px #f59e0b !important;
+}
+
+.header {
+  border-bottom-color: #f59e0b !important;
+}
+
+.header h1 {
+  color: #e0f2fe !important;
+}
+
+.header h1 span {
+  color: #f59e0b !important;
+  text-shadow: 0 0 30px rgba(245, 158, 11, 0.7) !important;
+}
+
+.student-form,
+.stats,
+.records {
+  background: rgba(8, 20, 34, 0.96) !important;
+  border-color: #1e4f68 !important;
+}
+
+.form-title,
+.records-title,
+td,
+th,
+.stat-card {
+  border-color: #1e4f68 !important;
+}
+
+.student-form input,
+.update-box input {
+  color: #e0f2fe !important;
+}
+
+.student-form input::placeholder {
+  color: #7dd3fc !important;
+}
+
+.student-form button {
+  color: #f59e0b !important;
+}
+
+.stats h2 {
+  color: #f59e0b !important;
+  text-shadow: 0 0 18px rgba(245, 158, 11, 0.55) !important;
+}
+
+.records-title p {
+  color: #f59e0b !important;
+}
+
+.score {
+  color: #38bdf8 !important;
+  text-shadow: 0 0 14px rgba(56, 189, 248, 0.55) !important;
+}
+
+.update-box button {
+  color: #7dd3fc !important;
+  border-color: #1e4f68 !important;
+}
+
+.update-box button:hover {
+  color: #f59e0b !important;
+  border-color: #f59e0b !important;
+}
+
